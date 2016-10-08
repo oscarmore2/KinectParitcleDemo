@@ -1,0 +1,7 @@
+Assembly-CSharp-firstpass.csproj
+Temp/
+ProjectSettings/ProjectVersion.txt
+Library/
+obj/
+*.csproj
+KinectParitcleDemo.sln

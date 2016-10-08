@@ -113,14 +113,14 @@ public class GestureMiniptation : MonoBehaviour {
 				float DirY = _integralDirection.y;
 
 				//Apply upper votex manipulator position
-				float HorzionUpper = DirX == 0f ? -(DirY * 2.2f / 0.01f) : -(DirY * 2.2f / DirX);
+				float HorzionUpper = DirX == 0f ? -(DirY * 2.2f * 100f) : -(DirY * 2.2f / DirX);
 				float vertiUpper = DirX > 0 ? -1f : 1f;
 				Vector3 calUpperVotex = (new Vector3(HorzionUpper, 2.2f * vertiUpper, 0f).normalized) * 2.2f;
 				Vector3 UppderVotexPosition = calUpperVotex + transform.localPosition;
 				votexObj [0].localPosition = Vector3.Lerp (votexObj [0].localPosition, UppderVotexPosition, Time.deltaTime * 6f);
 
 				//Apply lower votex manipulator position
-				float HorzionLower = DirX == 0f ? -(DirY * -2.2f / 0.01f) : -(DirY * -2.2f / DirX);
+				float HorzionLower = DirX == 0f ? -(DirY * -2.2f * 100f) : -(DirY * -2.2f / DirX);
 				float vertiLower = DirX > 0 ? 1f : -1f;
 				Vector3 calLowerVotex = (new Vector3 (HorzionLower, 2.2f * vertiLower, 0f).normalized) * 2.2f;
 				Vector3 LowerVotexPosition = calLowerVotex + transform.localPosition;
